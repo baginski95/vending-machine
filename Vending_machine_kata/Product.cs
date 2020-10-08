@@ -4,7 +4,7 @@
     {
 
         public string Name { get; }
-        public  float Price {get; }
+        public  int Price {get; }
         public int Id { get; }
         public int ProductCounter { get; set; }
 
