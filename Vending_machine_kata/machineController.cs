@@ -6,10 +6,12 @@ namespace Vending_machine_kata
 {
     class MachineController
     {
+        public View viewModel;
         public VendingMachine VendingMachine { get; }
         public MachineController()
         {
             VendingMachine = VendingMachine.GetInstance(InsertStartingCoins(), InsertStartingProducts());
+            viewModel = new View();
         }
         private Dictionary<Coin, int> InsertStartingCoins()
         {
@@ -83,9 +85,14 @@ namespace Vending_machine_kata
             };
             return coinValue;
         }
-        public int getCoinsToChange(int change)
+        public int getCoinsToChange(int change, Product product)
         {
 
+        }
+        public void ResetCurrentValue()
+        {
+            VendingMachine.CurrentValue = 0;
+            VendingMachine.Change = 0;
         }
     }
 }

@@ -36,5 +36,10 @@ namespace Vending_machine_kata
         {
             Console.WriteLine("EXACT CHANGE ONLY");
         }
+        public void Info()
+        {
+            Console.WriteLine("If u want to buy some stuff just insert Coins and select product ID");
+            Console.WriteLine("If you want to give back your Coins just press BACK");
+        }
     }
 }

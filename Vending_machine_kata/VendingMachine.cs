@@ -10,6 +10,7 @@ namespace Vending_machine_kata
         public Dictionary<int, Product> OwnedProducts { get; set; }
         public Dictionary<Coin, int> OwnedCoins { get; set; }
         public int CurrentValue { get; set; }
+        public int Change { get; set; }
         private VendingMachine( Dictionary<Coin,int> ownedCoins, Dictionary<int, Product> ownedProducts)
         {
             OwnedCoins = ownedCoins;
