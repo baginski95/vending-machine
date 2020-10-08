@@ -6,12 +6,14 @@
         public string Name { get; }
         public  float Price {get; }
         public int Id { get; }
+        public int ProductCounter { get; set; }
 
-        public Product(string name, float price, int id)
+        public Product(string name, float price, int id, int productCounter)
         {
             Price = price;
             Name = name;
             Id = id;
+            ProductCounter = productCounter;
         }
 
     }
