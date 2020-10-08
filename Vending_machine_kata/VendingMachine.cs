@@ -4,11 +4,25 @@ using System.Text;
 
 namespace Vending_machine_kata
 {
-    public class VendingMachine
+    public sealed class VendingMachine
     {
 
         public Dictionary<int, Product> OwnedProducts { get; set; }
         public Dictionary<Coin, int> OwnedCoins { get; set; }
+        private VendingMachine( Dictionary<Coin,int> ownedCoins, Dictionary<int, Product> ownedProducts)
+        {
+            OwnedCoins = ownedCoins;
+            OwnedProducts = ownedProducts;
+        }
+        private static VendingMachine _instance;
+        public static VendingMachine GetInstance(Dictionary<Coin, int> ownedCoins, Dictionary<int, Product> ownedProducts)
+        {
+            if(_instance == null)
+            {
+                _instance = new VendingMachine(ownedCoins, ownedProducts);
+            }
+            return _instance;
+        }
         public void RemoveProduct(Product product)
         {
             OwnedProducts[product.Id].ProductCounter -= 1;
