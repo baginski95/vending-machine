@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-10-08T10:19:13.089Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" etag="NndF2-M9Bc_5DAUB28vi" version="13.6.2" type="github">
+<mxfile host="app.diagrams.net" modified="2020-10-08T10:19:57.180Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" etag="s0ZKIZQ8DkNL5tPKJqDV" version="13.6.2" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="2019" dy="582" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -112,7 +112,7 @@
         </mxCell>
         <mxCell id="r75jW0JB1b5-8rUYqXUx-41" value="NO" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="r75jW0JB1b5-8rUYqXUx-40">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-151.5" y="134.99" as="offset" />
+            <mxPoint x="-111.07" y="254.99" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="r75jW0JB1b5-8rUYqXUx-42" value="print PRICE: productPrice" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;shadow=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
@@ -286,7 +286,7 @@
         </mxCell>
         <mxCell id="r75jW0JB1b5-8rUYqXUx-108" value="NO" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="r75jW0JB1b5-8rUYqXUx-107">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="45" y="123.5" as="offset" />
+            <mxPoint x="45" y="98.51" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="r75jW0JB1b5-8rUYqXUx-110" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="r75jW0JB1b5-8rUYqXUx-61" target="r75jW0JB1b5-8rUYqXUx-98">
