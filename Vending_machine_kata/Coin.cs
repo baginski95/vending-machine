@@ -2,6 +2,11 @@
 {
     public enum Coin
     {
-        piątal, dwójak, zecisz, pisiątGR, dwadzieściaGR, dziesięćGR, pięćGR, dwaGR, jedenGR 
+        fiveZL = 500, 
+        twoZL = 200, 
+        oneZL = 100,
+        fiftyGR = 50,
+        twentyGR = 20,
+        tenGR = 10,
     }
 }
