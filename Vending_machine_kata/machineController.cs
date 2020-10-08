@@ -83,5 +83,9 @@ namespace Vending_machine_kata
             };
             return coinValue;
         }
+        public int getCoinsToChange()
+        {
+
+        }
     }
 }

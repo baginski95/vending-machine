@@ -31,10 +31,14 @@ namespace Vending_machine_kata
         }
         public bool HasProduct(Product product)
         {
-            if (OwnedProducts[product.Id].ProductCounter >= 1)
-            {
-                return true;
-            }
+            if (OwnedProducts[product.Id].ProductCounter >= 1) return true;
+            return false;
+        }
+        public bool HasCoins()
+        {
+            if (OwnedCoins[Coin.FiveZL] >= 1 && OwnedCoins[Coin.TwoZL] >= 1 &&
+                OwnedCoins[Coin.OneZL] >= 1 && OwnedCoins[Coin.FiftyGR] >= 1 &&
+                OwnedCoins[Coin.TwentyGR] >= 1 && OwnedCoins[Coin.TenGR] >= 1) return true;
             return false;
         }
 
