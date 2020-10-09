@@ -71,6 +71,17 @@ namespace Vending_machine_kata
             }
             return false;
         }
+        public void GetCoinGiveProduct(Product product)
+        {
+            var coinsForMachine = this.ReturnCoins(product.Price);
+            foreach(var coin in coinsForMachine)
+            {
+                this.vendingMachine.OwnedCoins[coin] += 1;
+            }
+            this.vendingMachine.RemoveProduct(product);
+            
+
+        }
         public int ChangeCoinToValue(string coin)
         {
             var coinValue = coin switch
