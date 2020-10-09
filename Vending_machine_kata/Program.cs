@@ -20,7 +20,11 @@ namespace Vending_machine_kata
                     Controller.viewModel.UserCurrentAmount(Controller.vendingMachine.CurrentValue);
                     break;
                 }
-                if(Controller.)
+                if (Controller.HasUserWantsCoins(userInput))
+                {
+                    Controller.viewModel.ReturnCoins(Controller.ReturnCoins(Controller.vendingMachine.CurrentValue));
+                    Controller.ResetCurrentValue();
+                }
 
             }
         }
