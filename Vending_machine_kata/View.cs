@@ -45,5 +45,13 @@ namespace Vending_machine_kata
         {
             Console.WriteLine($"Current Amount: {currentAmount}");
         }
+        public void ReturnCoins(List<Coin> userCoins)
+        {
+            Console.WriteLine("Your COINS : ");
+            foreach(var coin in userCoins)
+            {
+                Console.WriteLine($"{coin}");
+            }
+        }
     }
 }
