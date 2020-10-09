@@ -7,10 +7,10 @@ namespace Vending_machine_kata
     class MachineController
     {
         public View viewModel;
-        public VendingMachine VendingMachine { get; }
+        public VendingMachine vendingMachine { get; }
         public MachineController()
         {
-            VendingMachine = VendingMachine.GetInstance(InsertStartingCoins(), InsertStartingProducts());
+            vendingMachine = VendingMachine.GetInstance(InsertStartingCoins(), InsertStartingProducts());
             viewModel = new View();
         }
         private Dictionary<Coin, int> InsertStartingCoins()
@@ -65,7 +65,7 @@ namespace Vending_machine_kata
                 67 => true,
                 _ => false
             };
-            if( isAvailable && VendingMachine.HasProduct(VendingMachine.OwnedProducts[productId]))
+            if( isAvailable && vendingMachine.HasProduct(vendingMachine.OwnedProducts[productId]))
             {
                 return true;
             }
@@ -85,14 +85,45 @@ namespace Vending_machine_kata
             };
             return coinValue;
         }
-        public int getCoinsToChange(int change, Product product)
+        public List<Coin> ReturnCoins(int currentValue)
         {
-
+            var coinsToChange = new List<Coin>();
+                if (currentValue - 500 >= 0)
+                {
+                    coinsToChange.Add(Coin.FiveZL);
+                    currentValue -= 500;
+                }
+                if(currentValue - 200 >= 0)
+                {
+                    coinsToChange.Add(Coin.TwoZL);
+                    currentValue -= 200;
+                }
+                if (currentValue - 100 >= 0)
+                {
+                    coinsToChange.Add(Coin.OneZL);
+                    currentValue -= 100;
+                }
+                if (currentValue - 50 >= 0)
+                {
+                    coinsToChange.Add(Coin.FiftyGR);
+                    currentValue -= 50;
+                }
+                if (currentValue - 20 >= 0)
+                {
+                    coinsToChange.Add(Coin.TwentyGR);
+                    currentValue -= 20;
+                }
+                if (currentValue - 10 >= 0)
+                {
+                    coinsToChange.Add(Coin.TenGR);
+                    currentValue -= 10;
+                }
+            return coinsToChange;
         }
         public void ResetCurrentValue()
         {
-            VendingMachine.CurrentValue = 0;
-            VendingMachine.Change = 0;
+            vendingMachine.CurrentValue = 0;
+            vendingMachine.Change = 0;
         }
     }
 }

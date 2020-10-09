@@ -41,5 +41,9 @@ namespace Vending_machine_kata
             Console.WriteLine("If u want to buy some stuff just insert Coins and select product ID");
             Console.WriteLine("If you want to give back your Coins just press BACK");
         }
+        public void UserCurrentAmount(int currentAmount)
+        {
+            Console.WriteLine($"Current Amount: {currentAmount}");
+        }
     }
 }
