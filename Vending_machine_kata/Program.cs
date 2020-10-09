@@ -31,9 +31,14 @@ namespace Vending_machine_kata
                     if (Controller.IsProductAvailable(productId))
                     {
                         var wantedProduct = Controller.vendingMachine.OwnedProducts[productId];
-                        if (Controller.vendingMachine.CurrentValue >= wantedProduct.Price)
+                        var userMoney = Controller.vendingMachine.CurrentValue;
+                        if (userMoney >= wantedProduct.Price)
                         {
-
+                            Controller.GetCoinGiveProduct(wantedProduct);
+                            userMoney -=  wantedProduct.Price;
+                            Controller.viewModel.GiveProductToCustomer(wantedProduct);
+                            Controller.viewModel.ReturnCoins(Controller.ReturnCoins(userMoney));
+                            Controller.ResetCurrentValue();
                         }
                         Controller.viewModel.ProductPrice(wantedProduct);
                     }
