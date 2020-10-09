@@ -11,20 +11,11 @@ namespace Vending_machine_kata
         public Dictionary<Coin, int> OwnedCoins { get; set; }
         public int CurrentValue { get; set; }
         public int Change { get; set; }
-        private VendingMachine( Dictionary<Coin,int> ownedCoins, Dictionary<int, Product> ownedProducts)
+        public VendingMachine( Dictionary<Coin,int> ownedCoins, Dictionary<int, Product> ownedProducts)
         {
             OwnedCoins = ownedCoins;
             OwnedProducts = ownedProducts;
             CurrentValue = 0;
-        }
-        private static VendingMachine _instance;
-        public static VendingMachine GetInstance(Dictionary<Coin, int> ownedCoins, Dictionary<int, Product> ownedProducts)
-        {
-            if(_instance == null)
-            {
-                _instance = new VendingMachine(ownedCoins, ownedProducts);
-            }
-            return _instance;
         }
         public void RemoveProduct(Product product)
         {

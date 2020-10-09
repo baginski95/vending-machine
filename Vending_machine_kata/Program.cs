@@ -18,7 +18,6 @@ namespace Vending_machine_kata
                 {
                     Controller.vendingMachine.CurrentValue += Controller.ChangeCoinToValue(userInput);
                     Controller.viewModel.UserCurrentAmount(Controller.vendingMachine.CurrentValue);
-                    break;
                 }
                 if (Controller.HasUserWantsCoins(userInput))
                 {
@@ -40,9 +39,9 @@ namespace Vending_machine_kata
                             Controller.viewModel.ReturnCoins(Controller.ReturnCoins(userMoney));
                             Controller.ResetCurrentValue();
                         }
-                        Controller.viewModel.ProductPrice(wantedProduct);
+                       else Controller.viewModel.ProductPrice(wantedProduct);
                     }
-                    Controller.viewModel.SoldOut();
+                   else Controller.viewModel.SoldOut();
                 }
 
             }

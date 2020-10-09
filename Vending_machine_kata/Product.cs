@@ -8,7 +8,7 @@
         public int Id { get; }
         public int ProductCounter { get; set; }
 
-        public Product(string name, float price, int id, int productCounter)
+        public Product(string name, int price, int id, int productCounter)
         {
             Price = price;
             Name = name;

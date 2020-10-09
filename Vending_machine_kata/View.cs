@@ -12,7 +12,7 @@ namespace Vending_machine_kata
             Console.WriteLine("Name | Id | Price");
             foreach(KeyValuePair<int, Product> product in ownedProducts)
             {
-                Console.WriteLine($"{product.Value.Name} | {product.Value.Id} | {product.Value.Price});
+                Console.WriteLine($"{product.Value.Name} | {product.Value.Id} | {product.Value.Price} ");
             }
         }
         public void InsertCoin()

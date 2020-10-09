@@ -10,7 +10,7 @@ namespace Vending_machine_kata
         public VendingMachine vendingMachine { get; }
         public MachineController()
         {
-            vendingMachine = VendingMachine.GetInstance(InsertStartingCoins(), InsertStartingProducts());
+            vendingMachine = new VendingMachine(InsertStartingCoins(), InsertStartingProducts());
             viewModel = new View();
         }
         private Dictionary<Coin, int> InsertStartingCoins()
