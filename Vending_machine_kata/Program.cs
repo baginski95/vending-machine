@@ -25,6 +25,20 @@ namespace Vending_machine_kata
                     Controller.viewModel.ReturnCoins(Controller.ReturnCoins(Controller.vendingMachine.CurrentValue));
                     Controller.ResetCurrentValue();
                 }
+                if (Controller.HasUserSelectProduct(userInput))
+                {
+                    int productId = Int32.Parse(userInput);
+                    if (Controller.IsProductAvailable(productId))
+                    {
+                        var wantedProduct = Controller.vendingMachine.OwnedProducts[productId];
+                        if (Controller.vendingMachine.CurrentValue >= wantedProduct.Price)
+                        {
+
+                        }
+                        Controller.viewModel.ProductPrice(wantedProduct);
+                    }
+                    Controller.viewModel.SoldOut();
+                }
 
             }
         }
