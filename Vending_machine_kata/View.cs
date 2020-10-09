@@ -39,7 +39,7 @@ namespace Vending_machine_kata
         public void Info()
         {
             Console.WriteLine("If u want to buy some stuff just insert Coins and select product ID");
-            Console.WriteLine("If you want to give back your Coins just press BACK");
+            Console.WriteLine("If you want to give back your Coins just press RETURN");
         }
         public void UserCurrentAmount(int currentAmount)
         {

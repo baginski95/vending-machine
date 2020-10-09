@@ -125,5 +125,14 @@ namespace Vending_machine_kata
             vendingMachine.CurrentValue = 0;
             vendingMachine.Change = 0;
         }
+        public bool UserWantsCoins(string userInput)
+        {
+            bool decision = userInput switch
+            {
+                "RETURN" => true,
+                _ => false
+            };
+            return decision;
+        }
     }
 }
